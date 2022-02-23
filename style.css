@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+:root {
+  --color-dark: #1f2937;
+  --color-light: #ffffff;
+  --color-secondary: #a3a3a3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  color: var(--color-dark);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-dark);
+}
+
+body {
+  background-image: url(./skyblue_color.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.glass {
+  min-height: 100vh;
+  background: radial-gradient(
+    100% 100% at 0 0,
+    hsla(0, 0%, 100%, 0.4) 0,
+    hsla(0, 0%, 100%, 0) 100%
+  );
+  box-shadow: inset -5px -5px 250px hsl(0deg 0% 100% / 2%);
+  -webkit-backdrop-filter: blur(42px);
+  backdrop-filter: blur(42px);
+}
+
+.form-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  max-width: 25rem;
+  min-height: 30rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 10px;
+  background-color: var(--color-light);
+  box-shadow: 0px 0px 20px 0px rgba(125, 125, 125, 0.1);
+}
+
+form > .title {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+form > .desc {
+  margin-bottom: 1rem;
+  font-size: 16px;
+  text-align: center;
+  color: var(--color-secondary);
+}
+
+form .mui-textfield {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+form .mui-textfield > input {
+  padding-left: 10px;
+  height: 2.8rem;
+  border: 0.13em solid #e2e2e2;
+  border-radius: 5px;
+}
+
+form .mui-textfield > input:focus {
+  height: 2.9rem;
+}
+
+form .mui-textfield > input:focus + label {
+  opacity: 1;
+}
+
+form .mui-textfield > input:focus::placeholder {
+  color: transparent;
+}
+
+form .mui-textfield > label {
+  opacity: 0;
+  height: 2rem;
+  font-size: 14px !important;
+  transform: translateY(-5px) !important;
+}
+
+form .mui-textfield > input:not(:placeholder-shown) + label {
+  opacity: 1;
+}
+
+form .mui-textfield > .see-password {
+  position: absolute;
+  padding: 0 10px;
+  background-color: transparent;
+  border: none;
+  height: 2.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+form > button.submit {
+  width: 100%;
+  height: 45px;
+  border-radius: 10px !important;
+}
+
+form > .mui-divider {
+  width: 100%;
+}
+
+form > .already {
+  font-size: 15px;
+}
+
+form > .already > span {
+  font-weight: 600;
+}

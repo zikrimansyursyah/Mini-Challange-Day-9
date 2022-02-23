@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Registrasi - Material UI</title>
+  <link rel="shortcut icon" href="haha.ico" type="image/x-icon">
+  <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
+</head>
+
+<body>
+  <div class="glass">
+    <div class="mui-container form-wrapper">
+      <form class="mui-form">
+        <div class="title">Sign Up</div>
+        <div class="desc">Become a member - you'll enjoy exclusive deals, offers, invites and rewards.</div>
+        <div class="mui-textfield mui-textfield--float-label">
+          <input type="text" name="name" placeholder="Name">
+          <label>Name</label>
+        </div>
+        <div class="mui-textfield mui-textfield--float-label">
+          <input type="number" name="age" placeholder="Age">
+          <label>Age</label>
+        </div>
+        <div class="mui-textfield mui-textfield--float-label">
+          <input type="text" name="address" placeholder="Address">
+          <label>Address</label>
+        </div>
+        <div class="mui-textfield mui-textfield--float-label">
+          <input type="number" name="phone" placeholder="Phone">
+          <label>Phone</label>
+        </div>
+        <div class="mui-textfield mui-textfield--float-label">
+          <input type="password" name="password" placeholder="Password" id="password">
+          <label>Password</label>
+          <a onclick="seeRegisPass1()" class="see-password see1"><svg width="18" height="18" fill="#a3a3a3"
+              viewBox="0 0 16 16">
+              <path
+                d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z" />
+              <path
+                d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z" />
+              <path
+                d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z" />
+            </svg></a>
+        </div>
+        <div class="mui-textfield mui-textfield--float-label">
+          <input type="password" name="confirm-password" placeholder="Confirm Password" id="confirm-password">
+          <label>Confirm Password</label>
+          <a onclick="seeRegisPass2()" class="see-password see2"><svg width="18" height="18" fill="#a3a3a3"
+              viewBox="0 0 16 16">
+              <path
+                d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z" />
+              <path
+                d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z" />
+              <path
+                d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z" />
+            </svg></a>
+        </div>
+        <button type="submit" class="mui-btn mui-btn--primary submit">Submit</button>
+        <div class="mui-divider"></div>
+        <div class="already">already have account? <span><a href="#">Login</a></span></div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function seeRegisPass1() {
+      const e = document.querySelector("#password")
+      if (e.type === "password") {
+        e.type = "text"
+        document.querySelector(".see1").innerHTML = `<svg width="18" height="18" fill="#a3a3a3" viewBox="0 0 16 16">
+            <path
+              d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+          </svg>`
+      } else {
+        e.type = "password"
+        document.querySelector(".see1").innerHTML = `<svg width="18" height="18" fill="#a3a3a3"
+              viewBox="0 0 16 16">
+              <path
+                d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z" />
+              <path
+                d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z" />
+              <path
+                d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z" />
+            </svg>`
+      }
+    }
+    function seeRegisPass2() {
+      const e = document.querySelector("#confirm-password")
+      if (e.type === "password") {
+        e.type = "text"
+        document.querySelector(".see2").innerHTML = `<svg width="18" height="18" fill="#a3a3a3" viewBox="0 0 16 16">
+            <path
+              d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+          </svg>`
+      } else {
+        e.type = "password"
+        document.querySelector(".see2").innerHTML = `<svg width="18" height="18" fill="#a3a3a3"
+              viewBox="0 0 16 16">
+              <path
+                d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z" />
+              <path
+                d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z" />
+              <path
+                d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z" />
+            </svg>`
+      }
+    }
+  </script>
+</body>
+
+</html>
