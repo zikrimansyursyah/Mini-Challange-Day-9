@@ -19,26 +19,25 @@
         <div class="title">Sign Up</div>
         <div class="desc">Become a member - you'll enjoy exclusive deals, offers, invites and rewards.</div>
         <div class="mui-textfield mui-textfield--float-label">
-          <input type="text" name="name" placeholder="Name">
-          <label>Name</label>
+          <input type="text" name="name" id="name" placeholder="Name" required>
+          <label error="required" for="name">Name</label>
         </div>
         <div class="mui-textfield mui-textfield--float-label">
-          <input type="number" name="age" placeholder="Age">
-          <label>Age</label>
+          <input type="number" name="age" id="age" placeholder="Age" required>
+          <label error="required" for="age">Age</label>
         </div>
         <div class="mui-textfield mui-textfield--float-label">
-          <input type="text" name="address" placeholder="Address">
-          <label>Address</label>
+          <input type="text" name="address" placeholder="Address" id="address" required minlength="10">
+          <label error="address at least 10 characters" for="address">Address</label>
         </div>
         <div class="mui-textfield mui-textfield--float-label">
-          <input type="number" name="phone" placeholder="Phone">
-          <label>Phone</label>
+          <input type="number" name="phone" id="phone" placeholder="Phone" required minlength="10">
+          <label error="at least 10 numbers" for="phone">Phone</label>
         </div>
         <div class="mui-textfield mui-textfield--float-label">
-          <input type="password" name="password" placeholder="Password" id="password">
-          <label>Password</label>
-          <a onclick="seeRegisPass1()" class="see-password see1"><svg width="18" height="18" fill="#a3a3a3"
-              viewBox="0 0 16 16">
+          <input type="password" name="password" placeholder="Password" id="password" required minlength="6">
+          <label error="password at least 6 characters" for="password">Password</label>
+          <a onclick="seeRegisPass1()" class="see-password see1"><svg width="18" height="18" fill="#a3a3a3" viewBox="0 0 16 16">
               <path
                 d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z" />
               <path
@@ -48,10 +47,9 @@
             </svg></a>
         </div>
         <div class="mui-textfield mui-textfield--float-label">
-          <input type="password" name="confirm-password" placeholder="Confirm Password" id="confirm-password">
-          <label>Confirm Password</label>
-          <a onclick="seeRegisPass2()" class="see-password see2"><svg width="18" height="18" fill="#a3a3a3"
-              viewBox="0 0 16 16">
+          <input type="password" name="confirm-password" placeholder="Confirm Password" id="confirm-password" required minlength="6">
+          <label error="password at least 6 characters" for="confirm-password">Confirm Password</label>
+          <a onclick="seeRegisPass2()" class="see-password see2"><svg width="18" height="18" fill="#a3a3a3" viewBox="0 0 16 16">
               <path
                 d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z" />
               <path

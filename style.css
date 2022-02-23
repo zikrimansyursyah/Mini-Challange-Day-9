@@ -26,6 +26,7 @@ body {
   background-image: url(./skyblue_color.jpg);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .glass {
@@ -42,6 +43,7 @@ body {
 
 .form-wrapper {
   min-height: 100vh;
+  padding: 5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,9 +101,24 @@ form .mui-textfield > input:focus::placeholder {
   color: transparent;
 }
 
+form .mui-textfield>input:invalid:not(:focus):required {
+  height: 2.9rem !important;
+  margin-bottom: 1rem !important;
+}
+
+form .mui-textfield>input:invalid:not(:focus):required + label[error]::after {
+  content: attr(error);
+  font-size: 11px;
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  transform: translate(-7rem, 4.3rem);
+  z-index: 100;
+}
+
 form .mui-textfield > label {
   opacity: 0;
-  height: 2rem;
+  height: 5.5rem;
   font-size: 14px !important;
   transform: translateY(-5px) !important;
 }
